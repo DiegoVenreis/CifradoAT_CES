@@ -1,0 +1,114 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f2f2f2;
+    color: #222;
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 1000px;
+    margin: 40px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.grupo {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+textarea,
+input,
+select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #aaa;
+    border-radius: 6px;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: #333;
+}
+
+.fila {
+    display: flex;
+    gap: 15px;
+}
+
+.fila .grupo {
+    flex: 1;
+}
+
+.botones {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+button {
+    flex: 1;
+    padding: 14px;
+    border: none;
+    border-radius: 6px;
+    background: #222;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #444;
+}
+
+.resultado {
+    margin-top: 30px;
+}
+
+.resultado textarea {
+    background: #f7f7f7;
+    resize: none !important;
+    overflow: auto;
+}
+
+.oculto {
+    display: none;
+}
+
+@media (max-width: 700px) {
+    .fila,
+    .botones {
+        flex-direction: column;
+    }
+
+    .contenedor {
+        width: 95%;
+        padding: 20px;
+    }
+}

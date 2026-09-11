@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Cifrado y Descifrado</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div class="contenedor">
+        <h1>Sistema de Cifrado y Descifrado</h1>
+        <div class="grupo">
+            <label for="alfabeto">
+                Conjunto de caracteres
+            </label>
+            <textarea id="alfabeto">ABCDEFGHIJKLMNÑOPQRSTUVWXYZ</textarea>
+        </div>
+
+        <div class="grupo">
+            <label for="mensaje">
+                Mensaje
+            </label>
+            <textarea
+                id="mensaje"
+                placeholder="Escribe aquí el mensaje..."></textarea>
+        </div>
+
+        <div class="fila">
+            <div class="grupo">
+                <label for="metodo">
+                    Método para cifrar
+                </label>
+
+                <select id="metodo" onchange="mostrarModulo()">
+                    <option value="cesar">
+                        Cesar
+                    </option>
+                    <option value="atbash">
+                        Atbash
+                    </option>
+                </select>
+            </div>
+
+            <div class="grupo" id="contenedorModulo">
+                <label for="modulo">
+                    Módulo / desplazamiento
+                </label>
+                <input type="number" id="modulo" value="3" min="0">
+            </div>
+        </div>
+
+        <div class="botones">
+            <button onclick="cifrar()"> Cifrar </button>
+            <button onclick="descifrarAutomaticamente()">
+                Descifrar automáticamente
+            </button>
+        </div>
+
+        <div class="resultado">
+            <label for="resultado">
+                Resultado
+            </label>
+            <textarea id="resultado" readonly></textarea>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
